@@ -16,6 +16,11 @@ namespace Application.Features.Products.Commands.UpdateProduct
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Rate { get; set; }
+        public record ver()
+        {
+            public string Name { get; set; }
+        public string Description { get; set; }
+    }
         public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, Response<int>>
         {
             private readonly IProductRepositoryAsync _productRepository;
